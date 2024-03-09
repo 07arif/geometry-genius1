@@ -35,11 +35,34 @@
             <div class="card-body">
               <h2 class="card-title">Triangle</h2>
               <p>Area (A) = 0.5 x b x h</p>
-              <div class="card-actions justify-center">
-                <button class="btn btn-primary">Calculate</button>
+              <p>
+                <input
+                  type="text"
+                  class="border text-xl w-24 px-2 bg-gray-200"
+                  id="triangle-base"
+                  placeholder="base"
+                />
+                <span class="ml-2">cm</span>
+                <input
+                  type="text"
+                  class="border text-xl w-24 px-2 bg-gray-200"
+                  id="triangle-height"
+                  placeholder="height"
+                />
+                <span class="ml-2">cm</span>
+              </p>
+              <p>Area:</p>
+              <div class="card-actions">
+                <button
+                  onclick="calculateTriangleAre()"
+                  class="btn btn-primary w-full"
+                >
+                  Calculate
+                </button>
               </div>
             </div>
           </div>
+
           <!-- second card-->
           <div class="card card-compact w-96 bg-base-100 shadow-xl">
             <figure>
@@ -73,5 +96,7 @@
         </div>
       </div>
     </main>
+    <!-- js connection -->
+    <script src="/scripts/are-calculate.js"></script>
   </body>
 </html>
