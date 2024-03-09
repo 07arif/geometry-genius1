@@ -1,9 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="cupcake">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- daisy UI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <title>Geometry Genius</title>
   </head>
-  <body></body>
+  <body class="lg:p-4">
+    <header>
+      <div class="bg-gray-200 px-7 py-3 rounded">
+        <h1 class="text-6xl font-bold">Interactive</h1>
+        <h4 class="text-4xl">Geometry Genius</h4>
+      </div>
+    </header>
+    <main class="lg:mt-8 md:mt-">
+      <!-- container -->
+      <div class="flex flex-col lg:flex-row">
+        <!-- shape container -->
+        <div
+          class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+        >
+          <!-- first card-->
+          <div class="card card-compact w-96 bg-base-100 shadow-xl">
+            <figure>
+              <img src="/images/triangle.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Triangle</h2>
+              <p>Area (A) = 0.5 x b x h</p>
+              <div class="card-actions justify-center">
+                <button class="btn btn-primary">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <!-- second card-->
+          <div class="card card-compact w-96 bg-base-100 shadow-xl">
+            <figure>
+              <img src="/images/rectangle.png " alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Rectangle</h2>
+              <p>Area (A) = w x I</p>
+              <div class="card-actions justify-center">
+                <button class="btn btn-primary">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <!-- third card-->
+          <div class="card card-compact w-96 bg-base-100 shadow-xl">
+            <figure>
+              <img src="/images/parallelogram.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Parallelogram</h2>
+              <p>Area (A) = 0.5 x b x h</p>
+              <div class="card-actions justify-center">
+                <button class="btn btn-primary">Calculate</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- area calculator -->
+        <div class="w-[400px]">
+          <div class="text-4xl">Area Calculator</div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
