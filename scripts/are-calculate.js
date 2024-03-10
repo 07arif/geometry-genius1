@@ -11,4 +11,7 @@ function calculateTriangleAre() {
   const heightValueText = heightField.value;
   const height = parseFloat(heightValueText);
   console.log(height);
+
+  const area = 0.5 * base * height;
+  console.log(area);
 }
