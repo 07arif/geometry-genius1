@@ -15,7 +15,7 @@
   </head>
   <body class="lg:p-4">
     <header>
-      <div class="bg-gray-200 px-7 py-3 rounded">
+      <div class="py-3 bg-gray-200 rounded px-7">
         <h1 class="text-6xl font-bold">Interactive</h1>
         <h4 class="text-4xl">Geometry Genius</h4>
       </div>
@@ -25,10 +25,10 @@
       <div class="flex flex-col lg:flex-row">
         <!-- shape container -->
         <div
-          class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+          class="grid flex-1 grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3"
         >
-          <!-- first card-->
-          <div class="card card-compact w-96 bg-base-100 shadow-xl">
+          <!-- Triangle card-->
+          <div class="shadow-xl card card-compact w-96 bg-base-100">
             <figure>
               <img src="/images/triangle.png" alt="Shoes" />
             </figure>
@@ -38,24 +38,26 @@
               <p>
                 <input
                   type="text"
-                  class="border text-xl w-24 px-2 bg-gray-200"
+                  class="w-24 px-2 text-xl bg-gray-200 border"
                   id="triangle-base"
                   placeholder="base"
                 />
                 <span class="ml-2">cm</span>
                 <input
                   type="text"
-                  class="border text-xl w-24 px-2 bg-gray-200"
+                  class="w-24 px-2 text-xl bg-gray-200 border"
                   id="triangle-height"
                   placeholder="height"
                 />
                 <span class="ml-2">cm</span>
               </p>
-              <p id="triangle-area">Area:</p>
+              <p class="text-2xl">
+                Area: <span id="triangle-area">0</span> cm <sup>2</sup>
+              </p>
               <div class="card-actions">
                 <button
                   onclick="calculateTriangleAre()"
-                  class="btn btn-primary w-full"
+                  class="w-full btn btn-primary"
                 >
                   Calculate
                 </button>
@@ -63,29 +65,40 @@
             </div>
           </div>
 
-          <!-- second card-->
-          <div class="card card-compact w-96 bg-base-100 shadow-xl">
+          <!-- Rectangle card-->
+          <div class="shadow-xl card card-compact w-96 bg-base-100">
             <figure>
-              <img src="/images/rectangle.png " alt="Shoes" />
+              <img src="/images/rectangle.png" alt="Shoes" />
             </figure>
             <div class="card-body">
               <h2 class="card-title">Rectangle</h2>
-              <p>Area (A) = w x I</p>
-              <div class="card-actions justify-center">
-                <button class="btn btn-primary">Calculate</button>
-              </div>
-            </div>
-          </div>
-          <!-- third card-->
-          <div class="card card-compact w-96 bg-base-100 shadow-xl">
-            <figure>
-              <img src="/images/parallelogram.png" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">Parallelogram</h2>
-              <p>Area (A) = 0.5 x b x h</p>
-              <div class="card-actions justify-center">
-                <button class="btn btn-primary">Calculate</button>
+              <p>Area (A) = w x l</p>
+              <p>
+                <input
+                  type="text"
+                  class="w-24 px-2 text-xl bg-gray-200 border"
+                  id="rectangle-width"
+                  placeholder="width"
+                />
+                <span class="ml-2">cm</span>
+                <input
+                  type="text"
+                  class="w-24 px-2 text-xl bg-gray-200 border"
+                  id="rectangle-length"
+                  placeholder="length"
+                />
+                <span class="ml-2">cm</span>
+              </p>
+              <p class="text-2xl">
+                Area: <span id="rectangle-area">0</span> cm <sup>2</sup>
+              </p>
+              <div class="card-actions">
+                <button
+                  onclick="calculateRectangleArea()"
+                  class="w-full btn btn-primary"
+                >
+                  Calculate
+                </button>
               </div>
             </div>
           </div>
